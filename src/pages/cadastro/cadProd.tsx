@@ -1,7 +1,7 @@
 import Head from "next/head";
 import BarraLateral from "@/components/sidebar";
 import produtos from "@/json/cadProd.json";
-import { FaSearch, FaArrowRight, FaPlus, FaFilter, FaTimes } from 'react-icons/fa';
+import { FaSearch, FaArrowRight, FaPlus, FaFilter,} from 'react-icons/fa';
 import { useState } from "react";
 import Modal from "@/components/modal";
 
