@@ -1,0 +1,204 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral para layout */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: var(--font-size);
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    background-color: var(--background);
+}
+
+/* Estilos para o contêiner do topo */
+.container-topo {
+    margin: var(--spacing) auto;
+    padding: var(--spacing);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra ajustada */
+    border-radius: var(--border-radius);
+}
+
+/* Estilo para barra de pesquisa */
+.pesquisar-topo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing);
+}
+
+.pesquisar-topo span {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0 10px 10px 0;
+}
+
+.pesquisar-topo input {
+    padding: 0.5rem var(--spacing);
+    border: 1px solid var(--lavender);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size);
+    transition: border-color 0.3s ease;
+    height: 35px;
+}
+
+.pesquisar-topo input:focus {
+    outline: none;
+    border-color: var(--blue-primary);
+}
+
+/* Botões no topo */
+.btn-topo {
+    display: flex;
+    gap: var(--spacing);
+}
+
+
+
+
+/* Contêiner geral */
+.container {
+    width: 90%;
+    margin: 20px auto;
+    padding: var(--spacing);
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra ajustada */
+}
+
+/* Estilos para o contêiner da tabela */
+.container-table {
+    margin-top: var(--spacing);
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Sombra ajustada */
+}
+
+/* Fixando o cabeçalho */
+thead th {
+    padding: 0.75rem;
+    background-color: var(--blue-primary);
+    color: white;
+    font-weight: bold;
+    font-size: var(--font-size);
+    text-align: left;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+thead tr {
+    border-top-left-radius: 10px;
+}
+
+/* Corpo da tabela */
+tbody {
+    width: 100%;
+}
+
+/* Linhas da tabela */
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: var(--lavender);
+    cursor: pointer;
+}
+
+tbody td {
+    padding: 0.75rem;
+    font-size: var(--font-size);
+    color: var(--text-color);
+    border-top: 1px solid var(--lavender2);
+    white-space: nowrap;
+    max-width: 100%; /* Defina o limite de tamanho máximo para a célula */
+    height: auto;
+    
+}
+
+/* Estilo para linhas alternadas */
+tr:nth-child(odd) {
+    background-color: var(--lavender2);
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+/* Garantindo o alinhamento correto das colunas */
+th, td {
+    text-align: left;
+    padding: 0.75rem;
+}
+
+/* Ajustando a largura das células da tabela */
+thead th, tbody td {
+    width: 20%;
+    max-width: 100%;
+}
+
+/* Media Query para telas pequenas (até 768px) */
+@media (max-width: 768px) {
+    .pesquisar-topo input {
+        width: 100%;
+        margin-top: var(--spacing);
+    }
+
+    .pesquisar-topo {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .pesquisar-topo button {
+        margin-top: 40px;
+    }
+
+    button {
+        margin-top: 20px;
+    }
+
+    .container-topo {
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
+        padding: 16px;
+    }
+
+    .container {
+        margin: auto;
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centraliza o container */
+        height: 100%;
+    }
+
+
+
+    thead th, tbody td {
+        width: auto;
+        max-width: 100%;
+    }
+}

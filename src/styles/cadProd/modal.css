@@ -1,0 +1,102 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    align-items: center;
+}
+
+.modal-container {
+    background: var(--lavender);
+    padding: 20px;
+    border-radius: 8px;
+    width: 85%; /* 85% da largura da tela */
+    min-height: 80%; /* Ajusta para altura mínima */
+    max-height: 80%; /* Limita a altura do modal */
+    position: relative;
+    box-sizing: border-box; /* Para garantir que o padding não ultrapasse o limite */
+    display: flex; /* Flex para garantir alinhamento do conteúdo */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--blue-primary);
+}
+
+.close-modal:hover {
+    background-color: black;
+}
+
+.modal-container-corpo {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--lavender2);
+    margin: 20px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-y: auto; /* Permite rolagem se o conteúdo for muito grande */
+
+}
+
+.modal-container-corpo label {
+    padding-left: 15px;
+    font-weight: 600;
+}
+
+.modal-container-corpo input {
+    margin: 0px 15px;
+    margin-bottom: 45px;
+    padding: 5px;
+    border: var(--blue-light) 1px solid;
+    border-radius: 8px;
+}
+.modal-container-corpo input:focus{
+    border: var(--blue-primary) 1px solid;
+    outline: none;
+}
+
+
+.modal-btns-functions{
+    display: flex;
+    justify-content: center;
+}
+.modal-btns-functions button{
+    margin: 0 10px;
+}
+
+@media(max-width: 768px) {
+    .modal-container {
+        width: 90%;
+        padding: 15px 0px; 
+    }
+
+    .modal-container-corpo {
+        height: auto;
+        justify-content: center; 
+    }
+
+    .modal-container-corpo label,
+    .modal-container-corpo input {
+        font-size: 14px; 
+        margin: 5px 5px;
+        text-align: start;
+        font-size: 14px;
+    }
+
+    .modal-container-corpo label{
+        padding-left: 0;
+    }
+}

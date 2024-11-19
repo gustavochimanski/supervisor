@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
+/* styles/globals.css */
+:root {
+  --blue-primary: #004e98;
+  --blue-light: #cddbfa;
+  --background: #edf2fb;
+  --text-color: #000000;
+  --lavender: #E2E6EE;      /* Lavanda suave */
+  --lavender2: #F5F7FC;     /* Lavanda mais clara */
+  --button-hover: #007BBE;  /* Cor do botão ao passar o mouse */
+  --icon-size: 1rem;        /* Tamanho padrão dos ícones */
+  --border-radius: 7px;     /* Padrão para bordas arredondadas */
+  --spacing: 20px;          /* Espaçamento base */
+  --font-size: 14px;        /* Tamanho da fonte padrão */
+
+
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--blue-primary);
+  color: white;
+  padding: 0.8rem;
+  font-size: var(--font-size);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  height: 35px;
+  font-family: inherit;
+}
+
+
+button:hover {
+  background-color: var(--text-color);
+  transform: translateY(-2px);
+  transition: all 0.5s;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Ícones nos botões */
+button svg {
+  font-size: var(--icon-size);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background);
+}
+
+
+/* Estilizando a scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--button-hover);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--lavender2);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px){
+  *{
+    font-size: 14px;
+  }
+}

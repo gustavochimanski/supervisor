@@ -1,0 +1,74 @@
+.toggleBtn {
+    position: fixed;
+  
+    top: 20px;
+    left: 0px;
+    padding: 8px 12px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: var(--blue-primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: left 0.4s ease, background-color 0.3s;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px ;
+  }
+  
+  .toggleBtn:hover {
+    background-color: var(--text-color);
+  }
+  
+  .toggleBtn.open {
+    left: 200px;
+    background-color: var(--text-color);
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    padding: 2rem 0;
+    background-color: var(--blue-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: left 0.5s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebarButton {
+    width: 190px;
+    padding: 12px 0;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: white;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.4s, color 0.3s;
+    
+  }
+  
+ 
+  .sidebar :hover{
+    transform: none;
+  }
+  
+  .sidebarButton:focus {
+    outline: none;
+  }
+  
+  .sidebar a{
+    text-decoration: none;
+  }
