@@ -7,20 +7,9 @@ import Modal from "@/components/modal";
 
 export default function CadProd() {
     const cabecalho = [
-        'ID', 
-        'Descrição',
-        'Código de Barras','Custo','Preço de Venda', 'Estoque', 'Categoria', 
-        'Oferta', 
-        'Descrição PDV', 
-        'NCM', 
-        'Vinc Preço', 
-        'Marca', 
-        'Balança', 
-        'Embalagem', 
-        'Quant Emb', 
-        'Etiquetas', 
-        'Ativo', 
-        'Bloqueado'
+        'ID', 'Descrição','Código de Barras','Custo','Preço de Venda', 'Estoque', 'Categoria', 'Oferta',
+        'Descrição PDV', 'NCM', 'Vinc Preço', 'Marca', 'Balança', 'Embalagem', 'Quant Emb', 'Etiquetas', 'Ativo', 'Bloqueado',
+        'Empresa', 'Custo Final'
     ];
     
 
@@ -102,13 +91,13 @@ export default function CadProd() {
                                     <td>{produto.Marca}</td>
                                     <td>{produto.Balança}</td>
                                     <td>{produto.Embalagem}</td>
-                                    <td>{produto["Quant Emb Diretivas"]}</td>
+                                    <td>{produto["Quant Emb"]}</td>
                                     <td>{produto.Etiquetas}</td>
                                     <td>{produto.Ativo}</td>
                                     <td>{produto.Bloqueado}</td>
+                                    <td>{produto.Empresa}</td>
                                 </tr>
                             ))}
-
                         </tbody>
                     </table>
                     

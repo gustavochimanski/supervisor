@@ -44,18 +44,6 @@ export default function Modal({
                                 </div> 
                             )
                         })}
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
                     </div>
                     <div className="modal-btns-functions">
                         <button> <FaPlus></FaPlus></button>
