@@ -95,7 +95,7 @@ table {
 
 /* Fixando o cabeçalho */
 thead th {
-    padding: 0.75rem;
+    padding: 1rem;
     background-color: var(--blue-primary);
     color: white;
     font-weight: bold;
@@ -119,6 +119,7 @@ tbody {
 /* Linhas da tabela */
 tbody tr {
     transition: background-color 0.3s ease;
+    
 }
 
 tbody tr:hover {
@@ -127,13 +128,14 @@ tbody tr:hover {
 }
 
 tbody td {
-    padding: 0.75rem;
+    padding: 0.70rem 1rem;
     font-size: var(--font-size);
     color: var(--text-color);
     border-top: 1px solid var(--lavender2);
     white-space: nowrap;
     max-width: 100%; /* Defina o limite de tamanho máximo para a célula */
     height: auto;
+    
     
 }
 
@@ -146,11 +148,7 @@ tr:nth-child(even) {
     background-color: white;
 }
 
-/* Garantindo o alinhamento correto das colunas */
-th, td {
-    text-align: left;
-    padding: 0.75rem;
-}
+
 
 /* Ajustando a largura das células da tabela */
 thead th, tbody td {
